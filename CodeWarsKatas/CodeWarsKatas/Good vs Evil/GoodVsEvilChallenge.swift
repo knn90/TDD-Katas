@@ -10,8 +10,9 @@ import Foundation
 TODO:
  - Validate Good input ✅
  - Calculate Good power
- - Validate Evil input
+ - Validate Evil input ✅
  - Calculate Evil power
+ - Evaluate match between good vs evil
 */
 
 class GoodVsEvilChallenge {
@@ -23,6 +24,15 @@ class GoodVsEvilChallenge {
         let arr = input.split(separator: " ")
         let paramString = arr.joined()
         guard arr.count == 6, Int(paramString) != nil else {
+            return false
+        }
+        return true
+    }
+    
+    func validateEvilInput(_ input: String) -> Bool {
+        let arr = input.split(separator: " ")
+        let paramString = arr.joined()
+        guard arr.count == 7    , Int(paramString) != nil else {
             return false
         }
         return true
