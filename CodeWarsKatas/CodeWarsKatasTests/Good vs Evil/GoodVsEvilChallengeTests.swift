@@ -17,6 +17,11 @@ class GoodVsEvilChallengeTests: XCTestCase {
         XCTAssertFalse(sut.validateGoodInput("1 2 3 -4 5 2"), "Parameter can't be negative")
     }
     
+    func test_validateGoodInput_returnTrueOnValidParams() {
+        let sut = makeSUT()
+        XCTAssertTrue(sut.validateGoodInput("0 9 0 1 0 12"))
+    }
+    
     func test_validateEvilInput_returnsFalseOnInvalidParams() {
         let sut = makeSUT()
         XCTAssertFalse(sut.validateEvilInput("1 2 3 4"), "Not enough parameters")
