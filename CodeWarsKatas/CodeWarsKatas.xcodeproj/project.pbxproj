@@ -10,6 +10,8 @@
 		6A191B3C260ED37400FD12D6 /* CodeWarsKatas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A191B32260ED37300FD12D6 /* CodeWarsKatas.framework */; };
 		6A191B43260ED37400FD12D6 /* CodeWarsKatas.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A191B35260ED37300FD12D6 /* CodeWarsKatas.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A191B58260ED47D00FD12D6 /* Challenge.md in Sources */ = {isa = PBXBuildFile; fileRef = 6A191B57260ED47D00FD12D6 /* Challenge.md */; };
+		6A191B65260EE80200FD12D6 /* GoodVsEvilChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A191B64260EE80200FD12D6 /* GoodVsEvilChallengeTests.swift */; };
+		6A191B6B260EE84B00FD12D6 /* GoodVsEvilChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A191B6A260EE84B00FD12D6 /* GoodVsEvilChallenge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		6A191B3B260ED37400FD12D6 /* CodeWarsKatasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeWarsKatasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A191B42260ED37400FD12D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A191B57260ED47D00FD12D6 /* Challenge.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Challenge.md; sourceTree = "<group>"; };
+		6A191B64260EE80200FD12D6 /* GoodVsEvilChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodVsEvilChallengeTests.swift; sourceTree = "<group>"; };
+		6A191B6A260EE84B00FD12D6 /* GoodVsEvilChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodVsEvilChallenge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		6A191B3F260ED37400FD12D6 /* CodeWarsKatasTests */ = {
 			isa = PBXGroup;
 			children = (
+				6A191B63260EE7DC00FD12D6 /* Good vs Evil */,
 				6A191B42260ED37400FD12D6 /* Info.plist */,
 			);
 			path = CodeWarsKatasTests;
@@ -90,6 +95,15 @@
 			isa = PBXGroup;
 			children = (
 				6A191B57260ED47D00FD12D6 /* Challenge.md */,
+				6A191B6A260EE84B00FD12D6 /* GoodVsEvilChallenge.swift */,
+			);
+			path = "Good vs Evil";
+			sourceTree = "<group>";
+		};
+		6A191B63260EE7DC00FD12D6 /* Good vs Evil */ = {
+			isa = PBXGroup;
+			children = (
+				6A191B64260EE80200FD12D6 /* GoodVsEvilChallengeTests.swift */,
 			);
 			path = "Good vs Evil";
 			sourceTree = "<group>";
@@ -159,6 +173,7 @@
 					};
 					6A191B3A260ED37400FD12D6 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -204,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A191B58260ED47D00FD12D6 /* Challenge.md in Sources */,
+				6A191B6B260EE84B00FD12D6 /* GoodVsEvilChallenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A191B65260EE80200FD12D6 /* GoodVsEvilChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CodeWarsKatasTests/Info.plist;
@@ -409,6 +427,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kndev.CodeWarsKatasTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -417,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CodeWarsKatasTests/Info.plist;
