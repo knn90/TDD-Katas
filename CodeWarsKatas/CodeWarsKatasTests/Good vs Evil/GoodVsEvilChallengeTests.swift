@@ -20,6 +20,9 @@ class GoodVsEvilChallengeTests: XCTestCase {
     func test_validateGoodInput_returnTrueOnValidParams() {
         let sut = makeSUT()
         XCTAssertTrue(sut.validateGoodInput("0 9 0 1 0 12"))
+        XCTAssertTrue(sut.validateGoodInput(" 6 1 3 8 6 7 "))
+        XCTAssertTrue(sut.validateGoodInput("6 2 1 4 6 1 "))
+        
     }
     
     func test_validateEvilInput_returnsFalseOnInvalidParams() {
